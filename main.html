@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div id="particles-js"></div>
+        <div class="intro">
+            <span class="text first-text">Veeresh</span>
+            <div class="skill"><span class="text sec-text">Frontend Developer</span></div>
+        </div>
+        <section class="sec show-animate">
+        <p class="animate">Frontend Developer who cares deeply about user experience</p>
+        </section>
+        <section class="edu show-animate">
+            <div class="ssn">
+                <img class="animate1" src="https://www.highereducationdigest.com/wp-content/uploads/2019/04/Img-2_800x480-5-768x461.jpg"/>
+                <p class="edu-text">I'm Veeresh currently pursuing a Bachelor's degree
+                    in<br> Electricals and Electronics Engineering in <br>Sri Sivasubramaniya Nadar College of Engineering.<br>
+                    I'm a passionate Frontend Developer specilized in crafting responsive ,<br> user-centric web interfaces
+                    that combine aesthetic appeal with seamless functionality.<br> With a strong attention to detail and a commitment to keeping up with industry trends,
+                    <br>I focus on delivering high-quality, scalable code that enhances user engagement and satisfaction.
+                </p>
+            </div>
+        </section>
+        <section class="image">
+            <h1>Skills</h1>
+            <div class="skill">
+            <img src="https://www.ccdc.cam.ac.uk/media/Product-Python.png"/>
+            <img src="https://seeklogo.com/images/C/c-programming-language-logo-9B32D017B1-seeklogo.com.png"/>
+            <img src="https://seeklogo.com/images/C/c-logo-43CE78FF9C-seeklogo.com.png"/>
+            <img src="https://seeklogo.com/images/R/react-logo-7B3CE81517-seeklogo.com.png"/>
+            <img src="https://seeklogo.com/images/M/material-ui-logo-5BDCB9BA8F-seeklogo.com.png" />
+            <img src="https://seeklogo.com/images/M/mysql-logo-69B39F7D18-seeklogo.com.png"/>
+            <img src="https://seeklogo.com/images/M/mongodb-logo-655F7D542D-seeklogo.com.png"/>
+            <img src="https://seeklogo.com/images/P/php-logo-DC4A01DBB6-seeklogo.com.png" />
+            <img src="https://seeklogo.com/images/F/flutter-logo-5086DD11C5-seeklogo.com.png"/>
+            <img src="https://seeklogo.com/images/H/html5-without-wordmark-color-logo-14D252D878-seeklogo.com.png"/>
+            <img src="https://seeklogo.com/images/C/css-3-logo-023C1A7171-seeklogo.com.png"/>
+            <img src="https://seeklogo.com/images/J/javascript-logo-8892AEFCAC-seeklogo.com.png"/>
+            </div>
+        </section>
+        <section>
+            <h1 className="Projects">Personal Projects</h1>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                  <div class="card">
+                    <img src="https://media.istockphoto.com/id/1406257864/vector/electric-car-ev-charge-station-vector-concept-electric-vehicle-charger-energy-background.jpg?s=612x612&w=0&k=20&c=bsjslHp7mE8s2l9eel9eG9fZr5epx65h9U6dfyhdSLs=" class="card-img-top" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title">Smart EV charging station locator</h3>
+                      <p class="card-text">An Ongoing project based on locating EV charging stations and 
+                        determining the availibility of slots using
+                        Machine Learning Algorithms and IoT. A mobile application acts as an
+                        interpretor between the EV and the nearby charging station.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="https://miro.medium.com/v2/resize:fit:1000/1*J0oFbwfR3sYanO8EfHWphw.jpeg" class="card-img-top" alt="Forrest">
+                    <div class="card-body">
+                      <h3 class="card-title">Big-Time Leisure (Movie review website)</h3>
+                      <p class="card-text">An Ongoing project which creates an environment for movie enthusiast to share and review about a particular movie
+                        <br><i>Used Php and MongoDb for login/signup page.<br>React.js did the rest.</i>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </section>
+        <section>
+        <div class="contact">
+            <h1>Contact me</h1>
+            <form action="mail.php" method="post">
+                <input type="text" name="full-name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" placeholder="Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        </section>
+        <footer>
+            <div class="icons">
+                <h3>Socials</h3>
+                <a href="https://www.linkedin.com/in/veeresh-s-r-30333931a/" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="https://github.com/Veerprogramer" class="fa fa-github"></a>
+            </div>
+            <div class="bottom">
+                <p>&copy; Copyright 2024. Made by Veeresh S R</p>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script>
+            const text = document.querySelector(".sec-text");
+            const textload = ()=>{
+                setTimeout(()=>{
+                    text.textContent="Frontend Developer";
+                },0);
+                setTimeout(()=>{
+                    text.textContent="UI/UX designer";
+                },4000);
+            }
+            textload();
+            setInterval(textload, 12000);
+            let sections = document.querySelectorAll('section');
+            window.onscroll = () => {
+                sections.forEach(sec=>{
+                    let top = window.scrollY;
+                    let offset = sec.offsetTop - 350;
+                    let height = sec.offsetHeight;
+
+                    if(top>= offset && top<offset + height){
+                        sec.classList.add('show-animate');
+                    }
+                    else{
+                        sec.classList.remove('show-animate');
+                    }
+                })
+            }
+            particlesJS("particles-js", {
+            "particles": {
+            "number": {
+                "value": 33,
+                "density": {
+                "enable": true,
+                "value_area": 1420.4657549380909
+                }
+            },
+            "color": {
+                "value": "#ffffff"
+            },
+            "shape": {
+                "type": "triangle",
+                "stroke": {
+                "width": 0,
+                "color": "#000000"
+                },
+                "polygon": {
+                "nb_sides": 5
+                },
+                "image": {
+                "src": "img/github.svg",
+                "width": 100,
+                "height": 100
+                }
+            },
+            "opacity": {
+                "value": 0.06313181133058181,
+                "random": false,
+                "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
+                }
+            },
+            "size": {
+                "value": 11.83721462448409,
+                "random": true,
+                "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ffffff",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 6,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+                }
+            }
+            },
+            "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                "enable": true,
+                "mode": "repulse"
+                },
+                "onclick": {
+                "enable": true,
+                "mode": "push"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                "distance": 400,
+                "line_linked": {
+                    "opacity": 1
+                }
+                },
+                "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+                },
+                "repulse": {
+                "distance": 200,
+                "duration": 0.4
+                },
+                "push": {
+                "particles_nb": 4
+                },
+                "remove": {
+                "particles_nb": 2
+                }
+            }
+            },
+            "retina_detect": true
+        });
+  
+        </script>
+    </body>
+</html>

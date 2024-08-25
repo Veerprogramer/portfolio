@@ -1,0 +1,219 @@
+@font-face {
+    font-family: myfont;
+    src: url(./Amsterdam-ZVGqm.ttf);
+}
+@font-face {
+    font-family: font2;
+    src: url(BeautifulPeoplePersonalUse-dE0g.ttf);
+}
+body{
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+}
+section{
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+section .animate{
+    transition: 1s;
+}
+.sec .animate{
+    transform: translateX(-100%);
+}
+.sec.show-animate .animate{
+    transform: translateX(0);
+}
+.ssn{
+    display: flex;
+}
+.animate{
+    font-family: font2;
+    color: white;
+    font-size: 30px;
+}
+.edu .animate1{
+    transform: translateX(-100%);
+}
+.edu.show-animate .animate1{
+    transform: translateX(0);
+}
+section .animate1{
+    transition: 1s;
+}
+.intro{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.intro .text{
+    position:relative;
+    color: cyan;
+    font-size: 30px;
+    font-weight: 600;
+}
+.intro .text.first-text{
+    font-family: myfont;
+    color:white
+}
+.text.sec-text:before{
+    content:"";
+    position:absolute;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    border-left:2px solid cyan;
+    animation: animate 4s steps(12) infinite;
+}
+@keyframes animate{
+    40%, 60%{
+        left: calc(100% + 20px);
+    }
+    100%{
+        left: 0%;
+    }
+}
+@keyframes rotate{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.skill{
+    position: relative;
+}
+.edu{
+    color: aliceblue;
+    display: flex;
+}
+.edu-text{
+    color: aliceblue;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 50px;
+    margin: 20px;
+}
+.image .skill img{
+    max-width: 70px;
+    margin: 0 20px;
+    animation: rotate 20s linear infinite;
+   }
+.image h1{
+    font-size: 40px;
+    
+}
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 10px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    background: white;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+.fa-instagram:hover{
+    background: #e1306c;
+    color:white;
+    transform: translateY(-10px);
+}
+
+.fa-linkedin:hover {
+    background: #125688;
+    color: white;
+    transform: translateY(-10px);
+}
+.fa-github:hover {
+    background: #4078c0;
+    color: white;
+    transform: translateY(-10px);
+}
+footer{
+    background: rgb(32, 32, 32);
+}
+.icons{
+    justify-content: center;
+    text-align: center;
+    background: rgb(32, 32, 32);
+}
+.card{
+    background: rgb(32, 32, 32);
+    filter: drop-shadow(1px 1px 10px cyan);
+    width: 18rem;
+    margin: 50px;
+}
+.card img{
+    max-width: 18rem;
+}
+.card img:hover{
+    opacity: 60%;
+}
+.row{
+    display: flex;
+}
+.bottom{
+    color: white;
+    text-align: center;
+    justify-content: center;
+    margin: 15px;
+}
+#particles-js {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+input, textarea {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #555;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: cyan;
+    color: #000;
+}
+.contact{
+    width: 300px;
+    justify-content: center;
+    text-align: center;
+}
+.contact h1{
+    font-size: 40px;
+}
+.Projects h1{
+    font-size: 40px;
+}
+
